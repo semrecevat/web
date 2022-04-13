@@ -165,14 +165,144 @@
     $markalar=array("bmw", "audi", "mersedes","peugeut");
 
 
+    echo "<pre>";
+    print_r($markalar);
+    echo "</pre>";
 
 
-    $markalar[0]="bmw";
-    $markalar[1]="audi";
-    $markalar[2]="mercedes";
-    $markalar[3]="peugeut";
+    $markalar1[0]="bmw";
+    $markalar1[1]="audi";
+    $markalar1[2]="mercedes";
+    $markalar1[3]="peugeut";
+
+    echo "<pre>";
+    print_r($markalar1);
+    echo "</pre>";
+
+
+    // sayılı dizilerde yapılan tırnak işaretine gerek duyulmaz ve yapılan işşlemler çağrışımloı kullanılır. 
+
+    $puanlar=array(
+        "ali"=>15,
+        "emre"=>25,
+        "gizem"=>12,
+        "hilal"=>21,
+        "fatma"=>55,
+
+    );
+    echo"<pre>";
+    print_r($puanlar);
+    echo "</pre>";
+
+
+
+    // dizi içinde dizilerde  array in içine birden fazla dizi kullanılır ve yazılır örnek.
+    /*
+    $aileler = array(
+      "Eliçalışkan" => array("Murat","Çiğdem","Esra"),
+      "Keçecioğlu" => array("Yavuz","Mustafa")
+   );
+
+   echo $aileler["Eliçalışkan"][0] . ",
+      Eliçalışkan ailesinin bir üyesidir."; 
+      
+      */ 
+      $aileler=array(
+          "salbas"=>array("emre","elif","aynur","selami"),
+          "eldek"=>array("mustafa","berkay","veysel"),
+      );
+      echo $aileler["salbas"][0].",salbas ailesinin bir üyesidir.";
+
+
+
+    //   birden fazla dizide çalışırken döngülerden yararlanırız bunlardan biride for döngüsüdür.
+
+
+    echo "<br>";
+    $sayi=1;
+    while($sayi<=5){
+        echo "benim sayım $sayi !";
+        $sayi++;
+    };
+
+// sayılar alt alta yazılmasını sağlamak için echo komudunun yanına br etiketi komay kolaylık sağlayacaktır.
+
+
+    echo "<br>";
+    $ikiser=0;
+
+    while ($ikiser<=20) {
+        echo "benim sayım $ikiser ! <br> ";
+        $ikiser ++ ;
+    };
+// birden yüze kadar sayıların yazılımı ve 45 olana kadar sayı üreten kodu yazın.
+//  rand bir sayı dizisinde belirlenen bir sayı dizisinde rastgele üretir.
+
+$sayi=1;
+$sayac=0;
+while($sayi!=45){
+   $sayi=rand(1,100);
+   $sayac++;
+}
+echo "$sayi sayısı $sayac denemede bulundu.";
+
+
+// 1 ile 100 arasında rastgele üretilen sayıların toplamı 500'den büyük olduğunda duran döngüyü, toplam ile toplanan sayı sayısını ekrana yazan php kodunu yazalım.
+
+
+    $sayi1=rand(1,100);
+    $sayac1=1;
+    $toplam=$sayi1;
+    while ($toplam <=500) {
+        $sayi1=rand(1,100);
+        $sayac++;
+        $toplam+=$sayi1;
+
+
+    }
+    echo "toplam=$toplam + toplanan sayı sayısı = $sayac";
+
+
+
+    //  günleri sıralayan dizi oluşturun ve  perşembe ve cumayı yazdırıan kodu yazın.
+
+    $gunler=array(
+        $gunler[]="pazartesi",
+        $gunler[]="salı",
+        $gunler[]="carsamba",
+        $gunler[]="persembe  ",
+        $gunler[]="cuma ",
+        $gunler[]="cumartesi",
+        $gunler[]="pazar",
+    );
+    echo "<br>" .  $gunler[3] . $gunler[4];
+
+
+    // okuldaki öğretmen ve mudur yardımcıları ve mudurun olduğu bir dizi yazdırın.
+
+
+    $okul=array(
+        $mudur =array("adi"     =>"METE"),
+        $mudury=array(
+            "adi1"     =>"dilşen",
+            "adi2"     =>"ercan",
+            "adi3"     => "uğur",
+        ),
+        $ogretmen=array(
+            "adi4"     =>   "apdullah",
+            "adi5"     => "rahvan",
+            "adi6"     =>"kısa LM",
+            "adi7"     => "trafo",
+            "adi8"     => "babannem",
+            "adi9"     => "iskeletor",
+            "adi10"     => "uzun LM"
+        ),
+    );
+
+    echo "<pre>";
+    print_r($okul);
+    echo "</pre>";
     
-        
 
           
     
